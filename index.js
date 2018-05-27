@@ -6,7 +6,8 @@ const path = require('path')
 const pkg = require('./package.json')
 const cache = require('./lib/fs-cache')
 const Opal = require('./lib/opal')
-const opalVersion = Opal.get('RUBY_ENGINE_VERSION')
+// const opalVersion = Opal.const_get_local('RUBY_ENGINE_VERSION')
+const opalVersion = Opal.Kernel.$const_get('RUBY_ENGINE_VERSION')
 const transpile = require('./lib/transpile')
 
 function getCurrentLoader(loaderContext) {
@@ -17,7 +18,7 @@ module.exports = function(source) {
   var result = {}
 
   const filename = this.resourcePath
-  const globalOptions = this.options.opal || {}
+  const globalOptions = {}
   const loaderOptions = loaderUtils.parseQuery(this.query)
   const userOptions = Object.assign({}, globalOptions, loaderOptions)
   const defaultOptions = {

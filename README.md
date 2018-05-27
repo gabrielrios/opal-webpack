@@ -1,7 +1,7 @@
 # opal-webpack
 > Opal is a compiler for writing JavaScript in Ruby.
 
-This package allows transpiling Ruby files using [Opal](https://opalrb.com/) and [webpack](https://github.com/webpack/webpack). It does so using a bootstrapped copy of the Opal compiler, which means your Opal files can be compiled directly from a Node process running webpack.
+This package allows transpiling Ruby files using [Opal](http://opalrb.org) and [webpack](https://github.com/webpack/webpack). It does so using a bootstrapped copy of the Opal compiler, which means your Opal files can be compiled directly from a Node process running webpack.
 
 Check out [this blog post](https://medium.com/@zetachang/from-sprockets-to-webpack-5f3d1afbd1b0) if you are interested in the project background.
 

@@ -6,6 +6,7 @@ require 'opal'
 require 'compiler_patches/disable_warnings'
 require 'opal-source-maps'
 require 'opal/builder'
+require 'opal/builder_processors'
 require 'nodejs'
 require "pathname"
 
